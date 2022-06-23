@@ -9,11 +9,12 @@ import Cliente from "./pages/cliente/cliente";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route exact path="/" element={<Cliente />}></Route>
-      </Routes>
-    </Router>
+    <Cliente />
+    // <Router>
+    //   <Routes>
+    //     <Route exact path="/" element={<Cliente />}></Route>
+    //   </Routes>
+    // </Router>
   );
 }
 
