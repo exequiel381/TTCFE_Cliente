@@ -77,7 +77,7 @@ const ModalComponent = (props) => {
                 color="primary"
                 sx={{ width: "150px", height: "60px" }}
                 onClick={() => {
-                  props.onConfirm();
+                  props.onConfirm ? props.onConfirm() : handleClose();
                 }}
               >
                 Aceptar

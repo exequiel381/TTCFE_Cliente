@@ -69,6 +69,10 @@ function Cliente() {
       .catch(function (error) {
         if (error.response) {
           setLoading(false);
+          setModalProps({
+            openModal: true,
+            text: "En este momento no podemos realizar el pedido",
+          });
           console.log(error.response.status);
           console.log(error.response.data);
         } else {
@@ -110,6 +114,10 @@ function Cliente() {
           if (error.response) {
             console.log(error.response.status);
             console.log(error.response.data);
+            setModalProps({
+              openModal: true,
+              text: "En este momento no podemos realizar el pedido",
+            });
           } else {
             console.log("Servidor rechazó la petición");
           }

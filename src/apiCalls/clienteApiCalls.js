@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const rootApiPath = "https://localhost:44373/api/Veterinaria/";
+const rootApiPath = "https://localhost:44373/api/Pedido/";
 
 export const postPedido = async (
   direccion,
@@ -48,7 +48,6 @@ export const postPedidoPrev = async (
     _tipoMascota: tipoMascota,
   };
 
-  console.log(body);
   try {
     const response = await axios.post(rootApiPath + "confirmationPost", body);
     return response.data;
