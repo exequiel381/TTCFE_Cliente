@@ -1,5 +1,5 @@
 import { Button, TextField } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import DropDown from "../../components/Dropdown/Dropdown";
 import RadioButtons from "../../components/RadioButtons/RadioButtons";
 import { StyleContainer } from "../../components/StyledComponents/StyleContainer";
@@ -142,7 +142,7 @@ function Cliente() {
             type={"number"}
             id="filled-required"
             label="0 si aun no cumplio"
-            defaultValue="0"
+            defaultValue={edad}
             variant="filled"
             onChange={(e) => setEdad(e.target.value)}
           />
@@ -154,7 +154,7 @@ function Cliente() {
             type={"number"}
             id="filled-required"
             label="Kg"
-            defaultValue="1"
+            defaultValue={peso}
             variant="filled"
             onChange={(e) => setPeso(e.target.value)}
           />
@@ -176,7 +176,7 @@ function Cliente() {
             error={direccion === "" ? true : false}
             id="filled-required"
             label="Direccion"
-            defaultValue=""
+            defaultValue={direccion}
             variant="filled"
             onChange={(e) => setDireccion(e.target.value)}
           />
@@ -188,7 +188,7 @@ function Cliente() {
             error={telefono === "" ? true : false}
             id="filled-required"
             label="Telefono"
-            defaultValue=""
+            defaultValue={telefono}
             variant="filled"
             onChange={(e) => setTelefono(e.target.value)}
           />

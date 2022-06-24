@@ -16,7 +16,7 @@ export const postPedido = async (
     _mascota: {
       _peso: peso,
       _edad: edad,
-      _esCastrado: castrado,
+      _esCastrado: castrado === "true",
     },
     _tipoMascota: tipoMascota,
   };
@@ -43,10 +43,12 @@ export const postPedidoPrev = async (
     _mascota: {
       _peso: peso,
       _edad: edad,
-      _esCastrado: castrado,
+      _esCastrado: castrado === "true",
     },
     _tipoMascota: tipoMascota,
   };
+
+  console.log(body);
   try {
     const response = await axios.post(rootApiPath + "confirmationPost", body);
     return response.data;
